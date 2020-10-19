@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
 import PageWrapper from './components/PageWrapper';
-import Home from './components/Pages/Home';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
+//Pages
+import Home from './components/Pages/Home';
+import About from './components/Pages/About';
 
 class App extends Component {
   render(){
@@ -13,10 +15,17 @@ class App extends Component {
           <PageWrapper>
 
             <Route
+            extract={true}
             path="/"
             component={Home}
          
             />
+
+            <Route
+            path="/about"
+            component={About}
+            />
+
             
           </PageWrapper>
         </Router>
